@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>View Reports</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between my-4">
+            <h2>Arbortrary</h2>
+            <a href="/my/trees" class="btn bg-light text-success">My Trees</a>
+            <h2>Welcome, {{user.first_name}}!</h2>
+        </div>
+        <div class="d-flex justify-content-between">
+            <h6>A site to track randomly planted trees</h6>
+            <a href="/dashboard" class="text-white btn bg-secondary" >Dashboard</a>
+            <a class="text-white btn bg-primary" href="/logout">Log Out</a>
+        </div>
+        <br>
+        <div class="card p-2 bg-light text-dark mx-auto">
+            <h3 class="text-center text-dark">{{tree_details.species}} planted by </h3>
+            <br>
+            <h3>Where: {{tree_details.location}}</h3>
+            <h3>When: {{tree_details.date.strftime('%Y-%m-%d')}}</h3>
+            <h3>Reason: {{tree_details.reason}}</h3>
+        </div>
+    </div>
+</body>
+
+</html>
