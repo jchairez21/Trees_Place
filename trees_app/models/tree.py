@@ -65,8 +65,9 @@ class Tree:
     @classmethod
     def get_one(cls, data):
         query = "SELECT * FROM trees WHERE id = %(id)s;"
-        result = connectToMySQL(cls.db).query_db(query, data)
-        return cls(result[0])
+        results = connectToMySQL(cls.db).query_db(query, data)
+        tree = cls(results[0])
+        return tree
 
     @classmethod
     def delete(cls, data):

@@ -21,9 +21,7 @@ def create_user():
         "email": request.form['email'],
         "password": bcrypt.generate_password_hash(request.form['password'])
     }
-
     user_id = User.save(data)
-
     session['logged_user'] = user_id
     # He created a SESSION with a KEY ['logged_user'] SET it EQUALS to LOGGED IN USERS = user_id
     return redirect('/dashboard')

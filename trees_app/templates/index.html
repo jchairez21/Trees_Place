@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Login</title>
 </head>
-<body>
+
+<body style="background-color: rgba(53, 25, 209, 0.808);">
     <div class="d-flex justify-content-around">
-        <form action="/user/create" method="POST" class="col-4 bg-light p-4 my-5">
+        <form action="/user/create" method="POST" class="col-4 bg-light p-4 my-5 rounded">
             <h2 class="text-center text-primary">Register</h2>
             <div class="form-group">
                 <label for="first_name">First Name:</label>
@@ -48,7 +51,7 @@
             </div>
             <input type="submit" value="Register" class="btn btn-success my-2">
         </form>
-        <form action="/user/login" method="POST" class="col-4 bg-light my-5 p-4">
+        <form action="/user/login" method="POST" class="col-4 bg-light my-5 p-4 rounded">
             <h2 class="text-center text-primary">Login</h2>
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -69,4 +72,5 @@
     </div>
     <!-- <a href="/ninjas" class="text-center mx-auto">Home</a> -->
 </body>
+
 </html>
